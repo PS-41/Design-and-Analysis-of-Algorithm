@@ -1,0 +1,13 @@
+Minimum Penalty = 38.5855
+Number of segments = 3
+Multiplier C = 10
+
+Running time (input):               74 ms
+Running time (algo):                24702 ms
+==112==
+==112== HEAP SUMMARY:
+==112==     in use at exit: 0 bytes in 0 blocks
+==112==   total heap usage: 8,023 allocs, 8,023 frees, 96,527,977 bytes allocated
+==112==
+==112== All heap blocks were freed -- no leaks are possible
+==112==

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.3.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.3.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu menu2 cid-ss6FVTGuSh" once="menu" id="menu2-k">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="assets/files/Assignment-2.pdf" target="_blank">Problem Statement</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="header1 cid-s48MCQYojq mbr-parallax-background" id="header1-f">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+
+    <div class="align-center container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>DAA Assignment 2</strong></h1>
+                
+                <p class="mbr-text mbr-fonts-style display-7">This project implements the Segmented Least Squares Algorithm to solve the line fitting problem using dynamic programming. It finds multiple best fit lines in the optimal partition using the cost multiplier for segments denoted by C.</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48udlf8KU" id="content1-8">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Problem Statement</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><span style="font-size: 1.2rem;">In this assignment, we consider the line fitting problem of finding multiple best fit lines given a set P of n points in 2-D plane.&nbsp;</span><br><span style="font-size: 1.2rem;">We are given a set P of n points in the pane, denoted by (x1, y1), (x2, y2), (x3, y3), . . . , (xn, yn) and suppose x1 &lt; x2 &lt; x3 &lt; . . . &lt; xn.</span><div><span style="font-size: 1.2rem;">We have to partition P into some segments.</span></div><div><span style="font-size: 1.2rem;">Segments is a subset of P that represents contiguous set of x-coordinates, denoted by S.</span></div><div><span style="font-size: 1.2rem;">We have to compute the line minimizing the error with respect to the points in S.</span></div></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vaXqeL6" id="content1-b">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Algorithm Discussion</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">We want to penalize too many partitions as well as the error.<div>So penalty is defined as the sum of&nbsp;</div></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6K5iOJoL" id="content8-m">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li>The number of segments into which we partition P, times a fixed, given multiplier C &gt; 0.&nbsp;</li>
+                        <li>For each segment, the error value of the best fit line through the segment.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vnjULo4" id="content1-c">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">So our objective is to find a partition with minimum penalty. We form a recurrence relation and use dynamic programming to solve the problem. Let OPT(i) be the optimal value for the points&nbsp; p1,p2,...,pi.<div>Let e[i][j] denote the minimum error of any line through pi, pi+1,...,pj.</div><div>So, we want to compute OPT(n).&nbsp;</div><div>Now if the last segment of the optimal partition is pi, pi+1,..., pn, then the value of optimal solution is&nbsp;</div><div><strong>OPT(n) = e[i][n] + C + OPT(i - 1)&nbsp;</strong></div><div>Since i can take only j distinct values,&nbsp;</div><div><strong>OPT(j) = min (e[i][j] + C + OPT(i - 1)) for 1 &lt;= i &lt;= j.&nbsp;</strong></div><div>Hence we have our dynamic programming solution.</div></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-ss6OEsCYFU" id="content1-r">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Results</strong><strong><br></strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">The first line of the input is n denoting the number of points.<div>Then n lines contain the points (x, y). The output for different penalty values are shown with visualizations.</div></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing2 cid-ss6OKocE4x" id="pricing2-s">
+    
+
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Input</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item"><a href="assets\input\in1.txt" class="text-primary" target="_blank" style="font-size: 1.2rem;">In1</a><br></li><li class="list-group-item"><a href="assets\input\in2.txt" class="text-primary" target="_blank">In2</a></li><li class="list-group-item"><a href="assets\input\in3.txt" class="text-primary" target="_blank">In3</a></li><li class="list-group-item"><a href="assets\input\in4.txt" class="text-primary" target="_blank">In4</a></li><li class="list-group-item"><a href="assets\input\in5.txt" class="text-primary" target="_blank">In5</a></li><li class="list-group-item"><a href="assets\input\in6.txt" class="text-primary" target="_blank">In6</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Output</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item"><a href="assets\output\out1.pdf" class="text-primary" target="_blank">Out1</a></li><li class="list-group-item"><a href="assets\output\out2.pdf" class="text-primary" target="_blank">Out2</a></li><li class="list-group-item"><a href="assets\output\out3.pdf" class="text-primary" target="_blank">Out3</a></li><li class="list-group-item"><a href="assets\output\out4.pdf" class="text-primary" target="_blank">Out4</a></li><li class="list-group-item"><a href="assets\output\out5.pdf" class="text-primary" target="_blank">Out5</a></li><li class="list-group-item"><a href="assets\output\out6.pdf" class="text-primary" target="_blank">Out6</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Timing Analysis</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item">3 ms</li><li class="list-group-item">3 ms</li><li class="list-group-item">4 ms</li><li class="list-group-item">30 ms</li><li class="list-group-item">3340 ms</li><li class="list-group-item">26147 ms</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5"><strong>Memory Usage</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item">94,661 bytes</li>
+                                <li class="list-group-item">110,765 bytes</li>
+                                <li class="list-group-item">153,989 bytes</li>
+                                <li class="list-group-item">1,088,633 bytes</li><li class="list-group-item">24,305,209 bytes</li><li class="list-group-item">96,527,977 bytes</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image2 cid-su0GQJRnyC" id="image2-z">
+    
+
+    
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/P_combined.png" alt="Mobirise">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"><strong>Plots of Penalty vs Segment</strong></p>
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="text-wrapper">
+                    <h3 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Analysis based on Penalty Value</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">As we can see in the output shown above for different penalty values for a given input, the number of segments decreases on increasing the value of C. This is because C denotes the penalty for adding an extra segment. So for a very small value of C, we observe that every two consecutive points form a segment because the error for such segment = 0 and penalty cost is very low. Now, as we increase the value of C, the number of segments decreases to reduce the total penalty. For a very high value of C, we get exactly 1 segment as partitioning into another segment will incur a high penalty cost and hence, not optimal.&nbsp;<div>The plot beside shows the dependence of number of segments on the penalty value (test case 2 and 3).</div><br><div>Another thing that we observe from the results shown above is that the penalty value has no effect on the space and time complexity of the algorithm. This is because the role of penalty value is only for calculating the error, and does not affect the complexity of our dynamic programming based algorithm. All the calculations involving the penalty value are O(1).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vrXhP0J" id="content1-d">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Issues Faced</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Implementing the algorithm was a challenging task. Some of the major issues faced while coding are following:</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6NncJmoZ" id="content8-p">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li><strong>Implementation: </strong>Since the problem has a lot of steps, the implementation is quite heavy. This issue was solved by planning the code well before actually writing it and designing all the classes and structures used properly.</li>
+                        <li><strong>Debugging: </strong>This was the most difficult step in the entire assignment. Once the code is finished, it would never be fully correct and requires debugging. Since there are a lot of small steps and many functions, it was really challenging to find where exactly the bug is. We overcame this issue by printing intermediate outputs of each functions and checking which intermediate output is not correct. So, we can find which function has the bug and hence, debug it.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-ss6NJD2LyV" id="content1-q">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>References</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><a href="assets/files/SegmentedLeastSquares.pptx" class="text-primary" target="_blank">Segmented Least Squares</a></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7">Project By</li></ul>
+            </div>
+            
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">Prakhar Suryavansh<br>Garvit Soni<br>Aman Badjate</p>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/v" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Mobirise site software - <a href="https://mobirise.site/o" style="color:#aaa;">Click for more</a></p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.3.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.3.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section class="menu menu2 cid-ss6FVTGuSh" once="menu" id="menu2-k">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="assets/files/Assignment-1.pdf" target="_blank">Assignment Instructions</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="header1 cid-s48MCQYojq mbr-parallax-background" id="header1-f">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+
+    <div class="align-center container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>DAA Assignment 1</strong></h1>
+                
+                <p class="mbr-text mbr-fonts-style display-7">This project implements an optimal divide-and-conquer algorithm to compute Measure and Contour for a set of Iso-Rectangles, i.e. rectangles whose sides are alligned with the coordinate axes.</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48udlf8KU" id="content1-8">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Problem Statement</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">We consider two geometrical problems that have been solved previously by line-sweep algorithms: the measure problem and the contour problem. Both problems involve determining some property of the union of a set of rectangles, namely the size and the contour (boundary) of the union. A single time-optimal divide-and-conquer algorithm is implemented to solve both problems. The&nbsp;<span style="font-size: 1.2rem;">divide-and-conquer algorithm is obtained by using a new technique called "separational representation", which extends the applicability of divide-and-conquer to orthogonal planar objects.</span><span style="font-size: 1.2rem;"><br></span></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6HrbdDnH" id="content8-l">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li><strong>The Measure Problem:</strong>&nbsp;<span style="font-size: 1.2rem;">Given a set of n iso-oriented rectangles in the plane, determine the measure of&nbsp;</span><span style="font-size: 1.2rem;">their union.&nbsp;</span><span style="font-size: 1.2rem;">In other words we ask for the size of the covered area of the plane.&nbsp;</span></li><li><strong>The Contour Problem: </strong><span style="font-size: 1.2rem;">For a set of iso-oriented rectangles in the plane, the contour is the boundary between the free and the covered area of the plane. In general it is a collection of disjoint "contour cycles", each of which is a sequence of alternating horizontal and vertical contour pieces.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vaXqeL6" id="content1-b">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Algorithm Discussion</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Both the measure and the contour are properties of the union of a set of rectangles. So, we calculate a common parameter for both the problems, that is called stripes. The approach has two steps.</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6K5iOJoL" id="content8-m">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li>Compute the description stripes of a set of rectangles using the divide-and conquer  algorithm.&nbsp;</li>
+                        <li>Given stripes, solve the specific problem for measure and contour.
+&nbsp;<span style="font-size: 1.2rem;">Since the second step is relatively simple for both problems, it is essentially the&nbsp;</span><span style="font-size: 1.2rem;">one powerful algorithm stripes that solves both problems.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vnjULo4" id="content1-c">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">We now discuss the divide step in the divide and conquer algorithm. Let us define frame by the x interval which contains all the rectangles. This frame is [-∞, ∞] initially. Now at each divide step, we divide the frame into two halves based on the median of the x-coordinate of the vertical edges of the rectangles it contains, so that both halves contains almost equal number of vertical edges.<br>Now the base case is when there is exactly one vertical edge in the frame. For this case we calculate L, R, P and S. These are the four parameters that are used while merging the frame (in the conquer step).</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6LInOdIU" id="content8-n">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li>L contains those left edges of frame whose partner is not in frame.</li>
+                        <li>R is symmetric to L (for right edges).</li>
+                        <li>P contains the y-projections of all endpoints of edges in the frame</li><li>S is the set of Stripes that will be required to calculate measure and contour</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-ss6M6nHqfP" id="content1-o">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">The next step is the merge step in which we merge L1, R1, P1, S1 (left frame) and L2, R2, P2, S2 (right frame) to obtain L, R, P and S for the merged frame. The merge step is done in 3 small steps of copy, blacken and concat.<br><strong>Copy:</strong> Different y-partitions of left frame Stripes (S1) and right frame Stripes (S2) are made equal.<br><strong>Blacken:</strong> After copying, S1 and S2 are blackened, meaning their x union fields are updated to indicate that they are completely covered by a rectangle.<br><strong>Concat:</strong> Every two adjacent stripes S1 and S2 (with the same y-interval) are concatenated to form the stripes S of the merged frame.<br>Now, we have the required data structure Stripes for the entire frame.</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6LInOdIU" id="content8-n">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li><strong>Measure Problem:</strong> Now we can simply add (the length of x union * width of y interval) of each stripe to obtain the total measure.</li>
+                        <li><strong>Contour Problem:</strong> For finding contour we store x union of each stripe as a BST and we can get the horizontal contour edges by searching in the BST to answer a free subinterval query. After we have all the horizontal contour edges, we have the complete information and vertical edges can be calculated simply.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-ss6OEsCYFU" id="content1-r">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Results</strong><strong><br></strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">In1 to In7 are small inputs (1 &lt;= n &lt;= 10³) and In8 to In10 are large inputs (10³ &lt;= n &lt;= 10⁵)</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing2 cid-ss6OKocE4x" id="pricing2-s">
+    
+
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Input</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item"><a href="results\1\input\in.txt" class="text-primary" target="_blank" style="font-size: 1.2rem;">In1</a><br></li><li class="list-group-item"><a href="results\2\input\in.txt" class="text-primary" target="_blank">In2</a></li><li class="list-group-item"><a href="results\3\input\in.txt" class="text-primary" target="_blank">In3</a></li><li class="list-group-item"><a href="results\4\input\in.txt" class="text-primary" target="_blank">In4</a></li><li class="list-group-item"><a href="results\5\input\in.txt" class="text-primary" target="_blank">In5</a></li><li class="list-group-item"><a href="results\6\input\in.txt" class="text-primary" target="_blank">In6</a></li><li class="list-group-item"><a href="results\7\input\in.txt" class="text-primary" target="_blank">In7</a></li><li class="list-group-item"><a href="results\8\input\in.txt" class="text-primary" target="_blank">In8</a></li><li class="list-group-item"><a href="results\9\input\in.txt" class="text-primary" target="_blank">In9</a></li><li class="list-group-item"><a href="results\10\input\in.txt" class="text-primary" target="_blank">In10</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Output</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item"><a href="results\1\output\out.txt" class="text-primary" target="_blank">Out1</a></li><li class="list-group-item"><a href="results\2\output\out.txt" class="text-primary" target="_blank">Out2</a></li><li class="list-group-item"><a href="results\3\output\out.txt" class="text-primary" target="_blank">Out3</a></li><li class="list-group-item"><a href="results\4\output\out.txt" class="text-primary" target="_blank">Out4</a></li><li class="list-group-item"><a href="results\5\output\out.txt" class="text-primary" target="_blank">Out5</a></li><li class="list-group-item"><a href="results\6\output\out.txt" class="text-primary" target="_blank">Out6</a></li><li class="list-group-item"><a href="results\7\output\out.txt" class="text-primary" target="_blank">Out7</a></li><li class="list-group-item"><a href="results\8\output\out.txt" class="text-primary" target="_blank">Out8</a></li><li class="list-group-item"><a href="results\9\output\out.txt" class="text-primary" target="_blank">Out9</a></li><li class="list-group-item"><a href="results\10\output\out.txt" class="text-primary" target="_blank">Out10</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Visualisation</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item"><a href="assets/files/vis1.pdf" class="text-primary" target="_blank">Vis1</a></li><li class="list-group-item"><a href="assets/files/vis2.pdf" class="text-primary" target="_blank" style="font-size: 1.2rem;">Vis2</a></li><li class="list-group-item"><a href="assets/files/vis3.pdf" class="text-primary" target="_blank">Vis3</a></li><li class="list-group-item"><a href="assets/files/vis4.pdf" class="text-primary" target="_blank">Vis4</a></li><li class="list-group-item"><a href="assets/files/vis5.pdf" class="text-primary" target="_blank">Vis5</a></li><li class="list-group-item"><a href="assets/files/vis6.pdf" class="text-primary" target="_blank">Vis6</a></li><li class="list-group-item"><a href="assets/files/vis7.pdf" class="text-primary" target="_blank">Vis7</a></li><li class="list-group-item"><a href="assets/files/vis8.pdf" class="text-primary" target="_blank">Vis8</a></li><li class="list-group-item"><a href="assets/files/vis9.pdf" class="text-primary" target="_blank">Vis9</a></li><li class="list-group-item"><a href="assets/files/vis10.pdf" class="text-primary" target="_blank">Vis10</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 align-center col-lg-3">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h6 class="plan-title mbr-fonts-style mb-3 display-5">
+                            <strong>Timing Analysis</strong></h6>
+                        <div class="plan-price">
+                            <p class="price mbr-fonts-style m-0 display-1"></p>
+                            <p class="price-term mbr-fonts-style mb-3 display-7"></p>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list mb-4">
+                            <ul class="list-group mbr-fonts-style list-group-flush display-7">
+                                <li class="list-group-item">8 ms</li>
+                                <li class="list-group-item">7 ms</li>
+                                <li class="list-group-item">10 ms</li>
+                                <li class="list-group-item">7 ms</li><li class="list-group-item">14 ms</li><li class="list-group-item">7 ms</li><li class="list-group-item">20 ms</li><li class="list-group-item">167 ms</li><li class="list-group-item">4086 ms</li><li class="list-group-item">9148 ms</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-s48vrXhP0J" id="content1-d">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Issues Faced</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Implementing the algorithm presented in the paper was a challenging task. Some of the major issues faced while coding are following:</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content8 cid-ss6NncJmoZ" id="content8-p">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="counter-container col-md-12 col-lg-9">
+                
+                <div class="mbr-text mbr-fonts-style display-7">
+                    <ul>
+                        <li><strong>Implementation: </strong>Since the problem has a lot of steps, the implementation is quite heavy. This issue was solved by planning the code well before actually writing it and designing all the classes and structures used properly.</li>
+                        <li><strong>Debugging: </strong>This was the most difficult step in the entire assignment. Once the code is finished, it would never be fully correct and requires debugging. Since there are a lot of small steps and many functions, it was really challenging to find where exactly the bug is. We overcame this issue by printing intermediate outputs of each functions and checking which intermediate output is not correct. So, we can find which function has the bug and hence, debug it.</li>
+                        <li><strong>Time Complexity: </strong>Some of the functions if implemented naively would be O(n²). So, it required some logical thinking to get the desired time complexity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content1 cid-ss6NJD2LyV" id="content1-q">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-md-9">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>References</strong></h3>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><a href="assets/files/Guting-paper.pdf" class="text-primary" target="_blank">Güting, Ralf Hartmut. "Optimal divide-and-conquer to compute measure and contour for a set of iso-rectangles." </a><em><a href="assets/files/Guting-paper.pdf" class="text-primary" target="_blank">Acta Informatica</a></em><a href="assets/files/Guting-paper.pdf" class="text-primary" target="_blank"> 21, no. 3 (1984): 271-291.</a></h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7">Project By</li></ul>
+            </div>
+            
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">Prakhar Suryavansh<br>Garvit Soni<br>Aman Badjate</p>
+            </div>
+        </div>
+    </div>
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/l" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Created with Mobirise - <a href="https://mobirise.site/k" style="color:#aaa;">Click here</a></p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/parallax/jarallax.min.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+</body>
+</html>

@@ -1,0 +1,5 @@
+Measure (Area) = 24 Square Units
+Contour (Perimeter) = 22 Units
+
+Running time (input):               6 ms
+Running time (algo):                8 ms
